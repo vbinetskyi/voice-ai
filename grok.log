@@ -1,0 +1,69 @@
+=== grok log started 2026-06-01T00:07:58.483Z ===
+2026-06-01T00:08:16.889Z [grok] session.created rid=-
+2026-06-01T00:08:16.890Z [grok] conversation.created rid=-
+2026-06-01T00:08:16.891Z [grok] ping rid=-
+2026-06-01T00:08:16.948Z [grok] session.updated rid=-
+2026-06-01T00:08:16.949Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:16.949Z [grok] response.created rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:17.261Z [grok] response.output_item.added rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:17.262Z [grok]   item type=message name=-
+2026-06-01T00:08:17.262Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:17.262Z [grok] response.content_part.added rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:17.777Z [grok] audio buffer started rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:17.777Z [grok] response.output_audio_transcript.delta rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:17.955Z [grok] response.output_audio_transcript.delta rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:18.731Z [grok] response.output_audio_transcript.delta rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:19.763Z [grok] response.output_audio_transcript.done rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:19.763Z [grok]   transcript done: "Hi, I'm an AI assistant calling on behalf of a client — I'd like to order a pizza. Can I get some details on what you'd like to order?"
+2026-06-01T00:08:19.764Z [grok] response.content_part.done rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:19.764Z [grok] response.output_audio.done rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:19.764Z [grok] response.output_item.done rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:19.764Z [grok] response.done rid=ffcceff3-6067-47c6-a79e-001a925aba33
+2026-06-01T00:08:19.764Z [grok] response.done rid=ffcceff3-6067-47c6-a79e-001a925aba33 hasPendingBuffer=false hasFnCall=false voiced=true
+2026-06-01T00:08:26.885Z [grok] ping rid=-
+2026-06-01T00:08:28.339Z [grok] input_audio_buffer.speech_started rid=-
+2026-06-01T00:08:32.399Z [grok] input_audio_buffer.speech_stopped rid=-
+2026-06-01T00:08:32.399Z [grok] input_audio_buffer.committed rid=-
+2026-06-01T00:08:32.712Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:32.713Z [grok] conversation.item.input_audio_transcription.completed rid=-
+2026-06-01T00:08:32.714Z [grok]   user said: " На файл специа ёмких и папероне N в Магрите."
+2026-06-01T00:08:32.716Z [grok] response.created rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:33.012Z [grok] response.output_item.added rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:33.013Z [grok]   item type=message name=-
+2026-06-01T00:08:33.013Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:33.013Z [grok] response.content_part.added rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:33.488Z [grok] audio buffer started rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:33.489Z [grok] response.output_audio_transcript.delta rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.027Z [grok] response.output_audio_transcript.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.027Z [grok]   transcript done: "let me check"
+2026-06-01T00:08:36.027Z [grok] response.content_part.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.028Z [grok] response.output_audio.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.028Z [grok] response.output_item.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.028Z [grok] response.output_item.added rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.028Z [grok]   item type=function_call name=request_user_input
+2026-06-01T00:08:36.028Z [grok] audio suppressed (tool, buffer already flushed) rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.028Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:36.028Z [grok] response.function_call_arguments.delta rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.029Z [grok] response.function_call_arguments.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.029Z [grok] response.output_item.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.030Z [grok] response.done rid=ee764db8-e42b-41cd-ad84-145a135d963c
+2026-06-01T00:08:36.030Z [grok] response.done rid=ee764db8-e42b-41cd-ad84-145a135d963c hasPendingBuffer=false hasFnCall=true voiced=false
+2026-06-01T00:08:36.887Z [grok] ping rid=-
+2026-06-01T00:08:46.885Z [grok] ping rid=-
+2026-06-01T00:08:49.257Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:49.259Z [grok] response.created rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:49.569Z [grok] response.output_item.added rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:49.570Z [grok]   item type=message name=-
+2026-06-01T00:08:49.571Z [grok] conversation.item.added rid=-
+2026-06-01T00:08:49.571Z [grok] response.content_part.added rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:50.062Z [grok] audio buffer started rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:50.062Z [grok] response.output_audio_transcript.delta rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:50.439Z [grok] response.output_audio_transcript.delta rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:50.440Z [grok] audio flushed early at ? — relay played rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:51.366Z [grok] response.output_audio_transcript.done rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:51.367Z [grok]   transcript done: "I'd like to order a pepperoni pizza. Do you have any questions or need more details?"
+2026-06-01T00:08:51.367Z [grok] response.content_part.done rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:51.367Z [grok] response.output_audio.done rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:51.367Z [grok] response.output_item.done rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:51.367Z [grok] response.done rid=5ed8493b-4e7a-4593-8bf3-426aa06db185
+2026-06-01T00:08:51.368Z [grok] response.done rid=5ed8493b-4e7a-4593-8bf3-426aa06db185 hasPendingBuffer=false hasFnCall=true voiced=false

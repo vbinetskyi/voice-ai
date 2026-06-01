@@ -1,0 +1,12 @@
+# deps
+node_modules/
+
+# env
+.env
+
+# generated
+openapi.json
+
+.claude
+CLAUDE.md
+voice-ai.pem
