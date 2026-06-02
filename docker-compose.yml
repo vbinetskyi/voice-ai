@@ -1,0 +1,15 @@
+services:
+  server:
+    build:
+      context: .
+    env_file: .env
+    restart: always
+
+  client:
+    build:
+      context: ../voice-ai-client
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+    restart: always
