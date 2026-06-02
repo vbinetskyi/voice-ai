@@ -14,6 +14,7 @@ import type {
 	SessionRepository,
 } from "../repository";
 import { CallBridge, type CallBridgeRegistry } from "./CallBridge";
+import { logger } from "../logger";
 
 // The data shape returned to the HTTP layer. It deliberately omits
 // functionCallId from PendingQuestion — that's an internal AI provider detail
@@ -172,11 +173,13 @@ export class CallService {
 		this.registry.set(sessionId, bridge);
 		try {
 			await bridge.attach();
+			logger.info("bridge opened", { sessionId, transport: session.transport });
 		} catch (err) {
 			this.registry.delete(sessionId);
 			this.sessionRepo.update(sessionId, (s) => {
 				s.status = "ended";
 			});
+			logger.error("bridge attach failed", { sessionId, err });
 			throw err;
 		}
 	}
@@ -210,6 +213,7 @@ export class CallService {
 		this.sessionRepo.update(sessionId, (s) => {
 			if (s.status !== "ended") s.status = "ended";
 		});
+		logger.info("session ended", { sessionId });
 	}
 
 	// Forcibly ends a call — used by the manual "End Call" button.
@@ -238,6 +242,7 @@ export class CallService {
 			pendingQuestion: null,
 			createdAt: new Date(),
 		});
+		logger.info("browser session created", { sessionId: id });
 		return { sessionId: id };
 	}
 }
