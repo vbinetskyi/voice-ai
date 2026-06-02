@@ -22,6 +22,7 @@ import { upgradeWebSocket } from "hono/bun";
 import type { WSContext } from "hono/ws";
 import type { MediaSink } from "../../../repository";
 import type { AppEnv } from "../../middleware";
+import { logger } from "../../../logger";
 
 // Twilio stream event shapes (incoming from Twilio)
 interface TwilioStartEvent {
@@ -104,7 +105,7 @@ streamsRouter.get(
 				try {
 					await callService.openBridge(sessionId, sink);
 				} catch (err) {
-					console.error("Failed to open bridge:", err);
+					logger.error("Failed to open bridge", err);
 					ws.close(1011, "Upstream connection failed");
 				}
 			},

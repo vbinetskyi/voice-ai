@@ -13,6 +13,7 @@ import type {
 	RealtimeAISession,
 	SessionRepository,
 } from "../repository";
+import { logger } from "../logger";
 
 // A map from sessionId → CallBridge, shared across the whole server.
 // Used to route answers back to the correct bridge and to detect reconnects.
@@ -137,7 +138,7 @@ When the goal is fully complete and confirmed, say goodbye and call hang_up.`,
 				// then we explicitly hang up via the telephony API as a fallback.
 				this.dispose();
 				this.onHangUp().catch((err) => {
-					console.error(`[bridge:${this.sessionId}] hangUpCall failed:`, err);
+					logger.error(`[bridge:${this.sessionId}] hangUpCall failed`, err);
 				});
 				return;
 			}

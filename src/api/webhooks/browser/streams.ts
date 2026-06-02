@@ -13,6 +13,7 @@
 import { Hono } from "hono";
 import { upgradeWebSocket } from "hono/bun";
 import type { WSContext } from "hono/ws";
+import { logger } from "../../../logger";
 import type { MediaSink } from "../../../repository";
 import type { AppEnv } from "../../middleware";
 
@@ -51,7 +52,7 @@ browserStreamsRouter.get(
 					// Browser sessions have no "start" event — activate immediately.
 					callService.activateSession(sessionId);
 				} catch (err) {
-					console.error("[browser-stream] Failed to open bridge:", err);
+					logger.error("[browser-stream] Failed to open bridge", err);
 					ws.close(1011, "Upstream connection failed");
 				}
 			},

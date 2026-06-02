@@ -4,6 +4,12 @@ services:
       context: .
     env_file: .env
     restart: always
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: eu-north-1
+        awslogs-group: /voice-ai/server
+        awslogs-create-group: "true"
 
   client:
     build:
@@ -16,3 +22,9 @@ services:
     depends_on:
       - server
     restart: always
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: eu-north-1
+        awslogs-group: /voice-ai/client
+        awslogs-create-group: "true"
